@@ -33,12 +33,12 @@ class Production
     return $this->rate;
   }
 
-  public function getGenreName(): string
+  public function getGenreName()
   {
     return $this->genre?->getName();
   }
 
-  public function getGenreDesc(): string
+  public function getGenreDesc()
   {
     return $this->genre?->getDescription();
   }
