@@ -44,3 +44,20 @@ Facciamo attenzione all’organizzazione del codice, suddividendolo in appositi 
 
 - Create una classe Genre (gli attributi potrebbero essere nome e descrizione) e fate in modo che la classe Production accetti un genere nel costruttore.
 - Aggiornate le informazioni stampate a schermo con il genere.
+<hr>
+
+### Update
+
+- Aggiungete al lavoro di ieri le classi Movie e TVSerie.
+- La classe Movie gestisce due proprietà: profitti e durata.
+- La classe TVSerie gestisce il numero di stagioni.
+
+> Se vuoi aggiungere altre proprietà alle due classi, fai pure! Queste sono solo indicazioni.
+
+- Facciamo in modo che Movie e TVSerie ereditino le proprietà di base dalla classe Production.
+- Creiamo delle istanze di Movie e TVSerie e stampiamo le informazioni a schermo.
+<hr>
+
+### BONUS
+
+- Facciamo in modo che la classe Production accetti più di un genere
