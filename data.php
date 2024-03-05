@@ -21,10 +21,10 @@ $genre_6 = new Genre("Anime", false, '
 
 
 $productions = [
-  new Movie("V for Vendetta", "English", 9.2, $genre_1, 132, 132511035),
-  new Movie("Bianco rosso e verdone", "Italian", 8.5, $genre_2, 110, 0),
-  new Movie("Fight Club", "English", 9.1, $genre_3, 139, 101209581),
-  new Movie("The intouchables", "French", 8.3, $genre_4, 112, 426588510),
-  new Movie("Die Welle", "German", 7.4, $genre_5, 107, 0),
-  new Serie("Death Note", "Japanese", 8.9, $genre_6, 2, 37),
+  new Movie("V for Vendetta", "English", 9.2, [$genre_1, $genre_1], 132, 132511035),
+  new Movie("Bianco rosso e verdone", "Italian", 8.5, [$genre_2, $genre_1], 110, 0),
+  new Movie("Fight Club", "English", 9.1, [$genre_3, $genre_1], 139, 101209581),
+  new Movie("The intouchables", "French", 8.3, [$genre_4, $genre_1], 112, 426588510),
+  new Movie("Die Welle", "German", 7.4, [$genre_5, $genre_1], 107, 0),
+  new Serie("Death Note", "Japanese", 8.9, [$genre_6, $genre_1], 2, 37),
 ];
