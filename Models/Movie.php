@@ -9,7 +9,7 @@ class Movie extends Production
   private $time;
   private $profit;
 
-  function __construct(string $title, string $lang, float $rate, array $genres, int $time, float $profit)
+  function __construct(string $title, string $lang, float $rate, $genres, int $time, float $profit)
   {
     parent::__construct($title, $lang, $rate, $genres);
     $this->setTime($time);

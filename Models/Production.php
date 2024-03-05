@@ -11,8 +11,8 @@ class Production
   public function __construct(
     string $title,
     string $lang,
-    float $rate = null,
-    array $genres = null,
+    float $rate,
+    $genres,
   ) {
     $this->title = $title;
     $this->lang = $lang;
@@ -35,23 +35,31 @@ class Production
 
   public function getGenreName()
   {
+    if (empty($this->genres))
+      return "#N/D";
     $names = array_map(fn($genre) => $genre->getName(), $this->genres);
     return implode(" | ", $names);
   }
 
   public function getGenreDesc()
   {
+    if (empty($this->genres))
+      return "#N/D";
     $descs = array_map(fn($genre) => $genre->getDesc(), $this->genres);
     return implode(" | ", $descs);
   }
 
-  public function setGenres(array $genres)
+  public function setGenres($genres)
   {
+    if (!is_array($genres))
+      $genres = [$genres];
+
     foreach ($genres as $genre) {
       if (!($genre instanceof Genre)) {
-        throw new InvalidArgumentException("Genre type error");
+        throw new Exception("Genre type error");
       }
     }
+
     $this->genres = $genres;
   }
   public function setRate(float $rate)

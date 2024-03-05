@@ -9,7 +9,7 @@ class Serie extends Production
   private $seasons;
   private $episodes;
 
-  function __construct(string $title, string $lang, float $rate, array $genres, int $seasons, int $episodes)
+  function __construct(string $title, string $lang, float $rate, $genres, int $seasons, int $episodes)
   {
     parent::__construct($title, $lang, $rate, $genres);
     $this->setSeasons($seasons);
