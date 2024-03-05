@@ -35,16 +35,14 @@ class Production
 
   public function getGenreName()
   {
-    foreach ($this->genres as $genre) {
-      echo $genre->getName() . " | ";
-    }
+    $names = array_map(fn($genre) => $genre->getName(), $this->genres);
+    return implode(" | ", $names);
   }
 
   public function getGenreDesc()
   {
-    foreach ($this->genres as $genre) {
-      echo $genre->getDesc() . "|";
-    }
+    $descs = array_map(fn($genre) => $genre->getDesc(), $this->genres);
+    return implode(" | ", $descs);
   }
 
   public function setGenres(array $genres)
