@@ -4,10 +4,10 @@ require_once(__DIR__ . "/Genre.php");
 
 class Production
 {
-  public $title;
-  public $lang;
-  public $rate;
-  public $genre;
+  protected $title;
+  protected $lang;
+  protected $rate;
+  protected $genre;
   public function __construct(
     string $title,
     string $lang,

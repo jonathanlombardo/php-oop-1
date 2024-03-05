@@ -2,9 +2,9 @@
 
 class Genre
 {
-  public $name;
-  public $adult;
-  public $description;
+  private $name;
+  private $adult;
+  private $description;
 
   function __construct(string $name, bool $adult, string $description)
   {

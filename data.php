@@ -2,6 +2,8 @@
 
 require_once(__DIR__ . "/Models/Production.php");
 require_once(__DIR__ . "/Models/Genre.php");
+require_once(__DIR__ . "/Models/Movie.php");
+require_once(__DIR__ . "/Models/Serie.php");
 
 
 $genre_1 = new Genre("Graphic novel", false, '
@@ -19,10 +21,10 @@ $genre_6 = new Genre("Anime", false, '
 
 
 $productions = [
-  new Production("V for Vendetta", "English", 9.2, $genre_1),
-  new Production("Bianco rosso e verdone", "Italian", 8.5, $genre_2),
-  new Production("Fight Club", "English", 9.1, $genre_3),
-  new Production("intouchables", "French", 8.3, $genre_4),
-  new Production("Die Welle", "German", 7.4, $genre_5),
-  new Production("Death Note", "Japanese", 8.9, $genre_6),
+  new Movie("V for Vendetta", "English", 9.2, $genre_1, 132, 132511035),
+  new Movie("Bianco rosso e verdone", "Italian", 8.5, $genre_2, 110, 0),
+  new Movie("Fight Club", "English", 9.1, $genre_3, 139, 101209581),
+  new Movie("The intouchables", "French", 8.3, $genre_4, 112, 426588510),
+  new Movie("Die Welle", "German", 7.4, $genre_5, 107, 0),
+  new Serie("Death Note", "Japanese", 8.9, $genre_6, 2, 37),
 ];
